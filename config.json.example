@@ -1,9 +1,0 @@
-{
-	"secret": "secret",
-	"public_path": "./src/github.com/elcct/defaultproject/public",
-	"template_path": "./src/github.com/elcct/defaultproject/views",	
-	"database": {
-		"hosts": "localhost",
-		"database": "defaultproject"
-	}
-}
