@@ -22,9 +22,6 @@ _testmain.go
 *.exe
 *.test
 
-**/github.com/
-**/labix.org/
-**/code.google.com/
 bin/*
 pkg/*
 
