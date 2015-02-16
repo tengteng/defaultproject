@@ -57,6 +57,8 @@ func main() {
 	// KTHXBYE
 	goji.Get("/logout", application.Route(controller, "Logout"))
 
+	goji.Get("/launch", application.Route(controller, "LaunchCourse"))
+
 	graceful.PostHook(func() {
 		application.Close()
 	})

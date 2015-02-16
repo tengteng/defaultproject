@@ -49,5 +49,10 @@
 	<div class="container" role="main">		
 	{{.Content}}	
 	</div>
+        <div>
+            {{if .User}}
+            <a href="/launch">Create a course</a>
+            {{end}}
+        </div>
 	{{template "footer" .}}
 {{end}}

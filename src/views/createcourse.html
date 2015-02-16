@@ -1,0 +1,87 @@
+{{define "createcourse"}}
+<!-- Consider IFTTT design -->
+
+<!--
+<link rel="stylesheet" href="assets/css/calendar.css">
+<div id="calendar"></div>
+<script type="text/javascript" src="assets/js/calendar.js"></script>
+<script type="text/javascript">
+var calendar = $("#calendar").calendar(
+{
+    tmpl_path: "/tmpls/",
+    events_source: function () { return []; }
+});         
+</script>
+-->
+
+
+{{template "header" .}}
+<div>
+    <form method="post" data-parsley-validate>
+        <fieldset>
+            <div class="row form-group">
+                <label class="col-md-2 col-md-offset-1" for="courseTitle">Course Title:</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="courseTitle" placeholder="Enter course title" required="" data-parsley-required-message="Please enter the course title">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-md-2 col-md-offset-1" for="description">Description:</label>
+                <div class="col-md-6">
+                    <textarea class="form-control" id="courseDescription" rows="6" placeholder="Description" required="" data-parsley-required-message="Please enter the course description"></textarea>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-md-2 col-md-offset-1" for="description">Teaching method:</label>
+                <div class="col-md-2">
+                    <select class="form-control" id="teaching_method">
+                        <option>Online</option>
+                        <option>Local</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-md-1 col-md-offset-1" for="description">Tuition:</label>
+                <div class="col-md-1">
+                    <input type="number" class="form-control" id="tuition" required="" data-parsley-required-message="Please enter the tuition">
+                </div>
+                <label class="col-md-1" for="description">Max participants:</label>
+                <div class="col-md-1">
+                    <input type="number" class="form-control" id="max_participants" placeholder=1 required="" data-parsley-required-message="Please enter the evaluated course participants">
+                </div>
+                <label class="col-md-1 col-md-offset-1" for="description">Expire date:</label>
+                <div class="col-md-2">
+                    <input type="date" class="form-control" id="expire_date" required="" data-parsley-required-message="Please enter the expire date">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-md-2 col-md-offset-1" for="description">Course Plan:</label>
+                <div class="col-md-6">
+                    <textarea class="form-control" id="course_plan" rows="6" placeholder="Course Plan" required="" data-parsley-required-message="Please enter the course plan"></textarea>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-md-2 col-md-offset-1" for="course_cover">Course Cover:</label>
+                <input class="col-md-2" type="file" id="course_cover">
+            </div>
+
+            <div class="row form-group">
+                <label class="checkbox-inline col-md-2 col-md-offset-5">
+                    <input type="checkbox" name="terms" id="terms" required="" data-parsley-required-message="You can't continue without accepting our Terms and Conditions">
+                    I accept terms and conditions
+                </label>
+            </div>
+            <div class="row form-group">
+                <button id="createcourse" name="createcourse" class="col-md-offset-5 col-md-1 btn btn-default">Submit</button>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+{{template "footer" .}}
+{{end}}
