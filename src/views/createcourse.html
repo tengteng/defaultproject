@@ -29,7 +29,7 @@ var calendar = $("#calendar").calendar(
             <div class="row form-group">
                 <label class="col-md-2 col-md-offset-1" for="description">Description:</label>
                 <div class="col-md-6">
-                    <textarea class="form-control" id="courseDescription" rows="6" placeholder="Description" required="" data-parsley-required-message="Please enter the course description"></textarea>
+                    <textarea class="form-control" id="courseDescription" name="courseDescription" rows="6" placeholder="Description" required="" data-parsley-required-message="Please enter the course description"></textarea>
                 </div>
             </div>
 
@@ -46,7 +46,7 @@ var calendar = $("#calendar").calendar(
             <div class="row form-group">
                 <label class="col-md-1 col-md-offset-1" for="description">Tuition:</label>
                 <div class="col-md-1">
-                    <input type="number" class="form-control" id="tuition" required="" data-parsley-required-message="Please enter the tuition">
+                    <input type="number" class="form-control" id="tuition" name="tuition" required="" data-parsley-required-message="Please enter the tuition">
                 </div>
                 <label class="col-md-1" for="description">Max participants:</label>
                 <div class="col-md-1">

@@ -58,6 +58,7 @@ func main() {
 	goji.Get("/logout", application.Route(controller, "Logout"))
 
 	goji.Get("/launch", application.Route(controller, "LaunchCourse"))
+	goji.Post("/launch", application.Route(controller, "LaunchCoursePost"))
 
 	graceful.PostHook(func() {
 		application.Close()

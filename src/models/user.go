@@ -10,10 +10,10 @@ import (
 
 type User struct {
 	ID        bson.ObjectId `bson:"_id,omitempty"`
-	Email     string        `bson:"e"`
-	Username  string        `bson:"u"`
-	Password  []byte        `bson:"p"`
-	Timestamp time.Time     `bson:"t"`
+	Email     string        `bson:"email"`
+	Username  string        `bson:"username"`
+	Password  []byte        `bson:"psswrd"`
+	Timestamp time.Time     `bson:"timestamp"`
 }
 
 func (user *User) HashPassword(password string) {
@@ -26,7 +26,7 @@ func (user *User) HashPassword(password string) {
 }
 
 func GetUserByEmail(database *mgo.Database, email string) (user *User) {
-	err := database.C("users").Find(bson.M{"e": email}).One(&user)
+	err := database.C("users").Find(bson.M{"email": email}).One(&user)
 
 	if err != nil {
 		glog.Warningf("Can't get user by email: %v", err)
