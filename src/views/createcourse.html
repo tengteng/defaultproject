@@ -22,7 +22,7 @@ var calendar = $("#calendar").calendar(
             <div class="row form-group">
                 <label class="col-md-2 col-md-offset-1" for="courseTitle">Course Title:</label>
                 <div class="col-md-6">
-                    <input type="text" class="form-control" id="courseTitle" placeholder="Enter course title" required="" data-parsley-required-message="Please enter the course title">
+                    <input type="text" class="form-control" id="courseTitle" name="courseTitle" placeholder="Enter course title" required="" data-parsley-required-message="Please enter the course title">
                 </div>
             </div>
 
@@ -36,7 +36,7 @@ var calendar = $("#calendar").calendar(
             <div class="row form-group">
                 <label class="col-md-2 col-md-offset-1" for="description">Teaching method:</label>
                 <div class="col-md-2">
-                    <select class="form-control" id="teaching_method">
+                    <select class="form-control" id="teaching_method" name="teaching_method">
                         <option>Online</option>
                         <option>Local</option>
                     </select>
@@ -50,11 +50,11 @@ var calendar = $("#calendar").calendar(
                 </div>
                 <label class="col-md-1" for="description">Max participants:</label>
                 <div class="col-md-1">
-                    <input type="number" class="form-control" id="max_participants" placeholder=1 required="" data-parsley-required-message="Please enter the evaluated course participants">
+                    <input type="number" class="form-control" id="max_participants" name="max_participants" placeholder=1 required="" data-parsley-required-message="Please enter the evaluated course participants">
                 </div>
                 <label class="col-md-1 col-md-offset-1" for="description">Expire date:</label>
                 <div class="col-md-2">
-                    <input type="date" class="form-control" id="expire_date" required="" data-parsley-required-message="Please enter the expire date">
+                    <input type="date" class="form-control" id="expire_date" name="expire_date" required="" data-parsley-required-message="Please enter the expire date">
                 </div>
             </div>
 

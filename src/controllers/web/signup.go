@@ -55,8 +55,8 @@ func (controller *Controller) SignUpPost(c web.C, r *http.Request) (string, int)
 	user.HashPassword(password)
 
 	if err := models.InsertUser(database, user); err != nil {
-		session.AddFlash("Error whilst registering user.")
-		glog.Errorf("Error whilst registering user: %v", err)
+		session.AddFlash("Error while registering user.")
+		glog.Errorf("Error while registering user: %v", err)
 		return controller.SignUp(c, r)
 	}
 
