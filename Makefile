@@ -20,3 +20,6 @@ vet:
 
 vendor_clean:
 	rm -rf ./_vendor/src
+
+clean:
+	rm -rf ./pkg ./bin

@@ -9,7 +9,7 @@ import (
 )
 
 func Login(c *mgo.Database, email string, password string) (user *models.User, err error) {
-	err = c.C("users").Find(bson.M{"e": email}).One(&user)
+	err = c.C("users").Find(bson.M{"email": email}).One(&user)
 	if err != nil {
 		return
 	}
