@@ -34,6 +34,15 @@ func GetUserByEmail(database *mgo.Database, email string) (user *User) {
 	return
 }
 
+func GetUserById(database *mgo.Database, id bson.ObjectId) (user *User) {
+	err := database.C("users").Find(bson.M{"_id": id}).One(&user)
+
+	if err != nil {
+		glog.Warningf("Can't get user by email: %v", err)
+	}
+	return
+}
+
 func InsertUser(database *mgo.Database, user *User) error {
 	user.ID = bson.NewObjectId()
 	return database.C("users").Insert(user)

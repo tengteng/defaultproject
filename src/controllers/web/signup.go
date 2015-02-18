@@ -1,7 +1,6 @@
 package web
 
 import (
-	"fmt"
 	"html/template"
 	"net/http"
 	"time"
@@ -14,9 +13,6 @@ import (
 
 // Sign up route
 func (controller *Controller) SignUp(c web.C, r *http.Request) (string, int) {
-
-	fmt.Println("XXXXX: ", c)
-
 	t := controller.GetTemplate(c)
 	session := controller.GetSession(c)
 
@@ -61,6 +57,7 @@ func (controller *Controller) SignUpPost(c web.C, r *http.Request) (string, int)
 	}
 
 	session.Values["User"] = user.ID
+	session.Values["UserEmail"] = user.Email
 
 	return "/", http.StatusSeeOther
 }

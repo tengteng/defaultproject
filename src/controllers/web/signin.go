@@ -41,6 +41,7 @@ func (controller *Controller) SignInPost(c web.C, r *http.Request) (string, int)
 	}
 
 	session.Values["User"] = user.ID
+	session.Values["UserEmail"] = user.Email
 
 	return "/", http.StatusSeeOther
 }
