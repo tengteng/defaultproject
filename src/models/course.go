@@ -18,6 +18,7 @@ type Course struct {
 	MaxParticipants int64         `bson:"max_participants"`
 	ExpireDate      time.Time     `bson:"expire_date"`
 	TeachingMethod  string        `bson:"teaching_method"`
+	Status          string        `bson:"status"`
 }
 
 func GetCourseByID(database *mgo.Database, id bson.ObjectId) (course *Course) {

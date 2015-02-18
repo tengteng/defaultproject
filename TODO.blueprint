@@ -1,0 +1,12 @@
+1. Show some courses on the frontpage;
+2. Enrich course fields;
+3. Course page prototyping; /c/12345
+4. Enrich user fields;
+5. User page prototyping; /u/12345
+6. Get all courses which a user created; (with course status)
+7. Get all course which a user participated; (with course status)
+8. User rating courses;
+9. Summarize all users' rating over a course;
+10. Summarize all users' rating over a teacher;
+11. Certificate prototyping;
+

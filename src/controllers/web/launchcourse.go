@@ -46,6 +46,7 @@ func (controller *Controller) LaunchCoursePost(c web.C, r *http.Request) (string
 		MaxParticipants: int64(max_participants),
 		ExpireDate:      expire,
 		TeachingMethod:  teaching_method,
+		Status:          "Created",
 	}
 
 	if err := models.InsertCourse(database, course); err != nil {
